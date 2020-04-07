@@ -1,0 +1,27 @@
+{
+	"name": "profile-card",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/index.html",
+	"scripts": {
+		"test": "echo %npm_package_name%",
+		"start": "parcel %npm_package_main%",
+		"prebuild": "rm -rf dist build",
+		"build": "parcel build %npm_package_main% -d build --public-url /%npm_package_name%/",
+		"postbuild": "gh-pages -d build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jenxym/profile-card.git"
+	},
+	"author": "Jennifer Morales",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jenxym/profile-card/issues"
+	},
+	"homepage": "https://github.com/jenxym/profile-card#readme",
+	"devDependencies": {
+		"gh-pages": "^2.2.0",
+		"parcel-bundler": "^1.12.4"
+	}
+}
