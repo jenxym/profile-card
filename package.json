@@ -4,9 +4,8 @@
 	"description": "",
 	"main": "src/index.html",
 	"scripts": {
-		"test": "echo %npm_package_name%",
 		"start": "parcel %npm_package_main%",
-		"prebuild": "rm -rf dist build",
+		"prebuild": "del /f dist build",
 		"build": "parcel build %npm_package_main% -d build --public-url /%npm_package_name%/",
 		"postbuild": "gh-pages -d build"
 	},
