@@ -1,12 +1,21 @@
 export default class ProfileCard extends HTMLElement {
 	constructor() {
 		super();
-		this.firstName = this.firstName;
-		this.lastName = this.lastName;
-		this.profilePic = this.profilePic;
-		this.age = this.age;
-		this.gender = this.gender;
-		this.email = this.email;
+		this.firstName = '...';
+		this.lastName = '...';
+		this.profilePic = '...';
+		this.age = '...';
+		this.gender = '...';
+		this.email = '...';
+	}
+
+	set randomUserData(data) {
+		this.firstName = data.name.first;
+		this.lastName = data.name.last;
+		this.profilePic = data.picture.large;
+		this.age = data.dob.age;
+		this.gender = data.gender;
+		this.email = data.email;
 		this.render();
 	}
 
